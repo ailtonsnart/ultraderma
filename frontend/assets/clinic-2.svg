@@ -1,0 +1,39 @@
+<svg width="1280" height="860" viewBox="0 0 1280 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wall2" x1="640" y1="0" x2="640" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#113545"/>
+      <stop offset="1" stop-color="#0C232D"/>
+    </linearGradient>
+    <linearGradient id="floor2" x1="640" y1="520" x2="640" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102028"/>
+      <stop offset="1" stop-color="#081318"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="860" fill="url(#wall2)"/>
+  <rect y="520" width="1280" height="340" fill="url(#floor2)"/>
+  <circle cx="1086" cy="126" r="92" fill="#F3B71D" opacity="0.16"/>
+  <circle cx="184" cy="170" r="124" fill="#1AB2C2" opacity="0.14"/>
+  <rect x="0" y="448" width="1280" height="10" fill="#153846"/>
+  <rect x="96" y="202" width="352" height="254" rx="34" fill="#11222A"/>
+  <rect x="96" y="202" width="352" height="254" rx="34" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="142" y="246" width="72" height="72" rx="36" fill="#148D99"/>
+  <circle cx="178" cy="282" r="24" stroke="#F6F2EC" stroke-width="3"/>
+  <path d="M164 270C170 264 186 264 192 270" stroke="#F6F2EC" stroke-width="3" stroke-linecap="round"/>
+  <path d="M154 288C164 298 192 298 202 288" stroke="#F6F2EC" stroke-width="3" stroke-linecap="round"/>
+  <text x="236" y="292" fill="#F6F2EC" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="700">UltraDerma</text>
+  <text x="144" y="352" fill="#AFC0C8" font-family="Segoe UI, Arial, sans-serif" font-size="22">Recepção e acolhimento</text>
+  <rect x="560" y="276" width="394" height="280" rx="38" fill="#0A1B22"/>
+  <rect x="560" y="276" width="394" height="280" rx="38" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="606" y="332" width="300" height="124" rx="28" fill="#1A3D4D"/>
+  <rect x="628" y="352" width="120" height="22" rx="11" fill="#1AB2C2" opacity="0.6"/>
+  <rect x="628" y="390" width="182" height="18" rx="9" fill="#F6F2EC" opacity="0.36"/>
+  <rect x="628" y="420" width="148" height="18" rx="9" fill="#F6F2EC" opacity="0.24"/>
+  <rect x="128" y="548" width="238" height="126" rx="28" fill="#C9A87C"/>
+  <rect x="154" y="516" width="186" height="72" rx="36" fill="#D9BC8E"/>
+  <rect x="430" y="586" width="146" height="108" rx="22" fill="#0F2530"/>
+  <rect x="734" y="598" width="184" height="92" rx="24" fill="#0F2530"/>
+  <rect x="1004" y="542" width="84" height="152" rx="42" fill="#113845"/>
+  <circle cx="1046" cy="506" r="38" fill="#2F7E56"/>
+  <circle cx="1018" cy="522" r="24" fill="#3A8F63"/>
+  <path d="M0 736C186 702 360 700 550 724C736 748 934 748 1280 716V860H0V736Z" fill="#071317"/>
+</svg>
