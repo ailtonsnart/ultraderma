@@ -87,8 +87,8 @@ const professionals = [
     specialization: "Dermatologia Preventiva",
     crm: "CRM 00002/UF",
     description:
-      "Foco em prevencao, check-up dermatologico e acompanhamento regular com orientacoes claras ao paciente.",
-    areas: ["Check-up da pele", "Mapeamento de lesoes", "Prevencao"],
+      "Foco em prevenção, check-up dermatológico e acompanhamento regular com orientações claras ao paciente.",
+    areas: ["Check-up da pele", "Mapeamento de lesões", "Prevenção"],
     image: "./assets/professional-2.svg",
     imagePosition: "center 20%",
     alt: "Foto do profissional 02"
@@ -98,8 +98,8 @@ const professionals = [
     specialization: "Especialista em Dermatologia",
     crm: "CRM 4011/MA",
     description:
-      "Especialista com ampla experiencia em dermatologia clinica, atuando com foco em cuidado personalizado e resultados efetivos.",
-    areas: ["Dermatologia Clinica", "Pele", "Acompanhamento de tratamentos"],
+      "Especialista com ampla experiência em dermatologia clínica, atuando com foco em cuidado personalizado e resultados efetivos.",
+    areas: ["Dermatologia Clínica", "Pele", "Acompanhamento de tratamentos"],
     image: "assets/profissionais/magno.jpeg",
     imagePosition: "center 14%",
     alt: "Foto do profissional 03"
@@ -226,18 +226,18 @@ const featuredProfessionals = professionals.slice(0, 2);
 
 const clinicSlides = [
   {
-    title: "Fachada principal da clinica",
+    title: "Fachada principal da clínica",
     description:
-      "Uma primeira vista pensada para transmitir presenca, organizacao e confianca logo na chegada.",
+      "Uma primeira vista pensada para transmitir presença, organização e confiança logo na chegada.",
     image: "assets/estrutura/foto1.jpeg",
-    alt: "Imagem da fachada da clinica UltraDerma"
+    alt: "Imagem da clínica UltraDerma"
   },
   {
-    title: "Recepcao da UltraDerma",
+    title: "Recepção da UltraDerma",
     description:
       "Um ambiente preparado para acolher o paciente com conforto, clareza e identidade visual consistente.",
     image: "assets/estrutura/foto2.jpeg",
-    alt: "Imagem da recepcao da clinica UltraDerma"
+    alt: "Imagem da recepção da clínica UltraDerma"
   },
 ];
 
@@ -336,7 +336,7 @@ const scheduleServiceCatalog = [
 
 /*
  * CADASTRE A DISPONIBILIDADE REAL DOS PROFISSIONAIS ABAIXO.
- * Use a chave do servico e informe os dias com seus respectivos horarios.
+ * Use a chave do serviço e informe os dias com seus respectivos horários.
  *
  * Exemplo:
  * "especialidade-dermatologia-clinica": [
@@ -540,7 +540,7 @@ function getServiceLabelByValue(serviceValue) {
     }
   }
 
-  return serviceValue === "servico-outro" ? "Outro servico" : "";
+  return serviceValue === "servico-outro" ? "Outro serviço" : "";
 }
 
 function updateCustomServiceVisibility(serviceValue) {
@@ -589,7 +589,7 @@ function populateScheduleServices() {
     return;
   }
 
-  scheduleServiceSelect.innerHTML = '<option value="">Selecione um servico</option>';
+  scheduleServiceSelect.innerHTML = '<option value="">Selecione um serviço</option>';
 
   scheduleServiceCatalog.forEach((group) => {
     const optgroup = document.createElement("optgroup");
@@ -607,7 +607,7 @@ function populateScheduleServices() {
 
   const otherOption = document.createElement("option");
   otherOption.value = "servico-outro";
-  otherOption.textContent = "Outro servico (digite abaixo)";
+  otherOption.textContent = "Outro serviço (digite abaixo)";
   scheduleServiceSelect.appendChild(otherOption);
 }
 
@@ -635,11 +635,11 @@ function updateScheduleTimeOptions() {
 
   setSelectOptions(
     scheduleTimeSelect,
-    [{ value: "A confirmar com a clinica", label: "A confirmar com a clinica" }],
+    [{ value: "A confirmar com a clínica", label: "A confirmar com a clínica" }],
     "",
     false
   );
-  scheduleTimeSelect.value = "A confirmar com a clinica";
+  scheduleTimeSelect.value = "A confirmar com a clínica";
 }
 
 function updateScheduleAvailability(serviceValue) {
@@ -650,10 +650,10 @@ function updateScheduleAvailability(serviceValue) {
   updateCustomServiceVisibility(serviceValue);
 
   if (!serviceValue) {
-    setSelectOptions(scheduleDaySelect, [], "Selecione um servico primeiro", true);
+    setSelectOptions(scheduleDaySelect, [], "Selecione um serviço primeiro", true);
     setSelectOptions(scheduleTimeSelect, [], "Selecione um dia primeiro", true);
     updateScheduleNote(
-      "Selecione um servico para consultar as opcoes de atendimento.",
+      "Selecione um serviço para consultar as opções de atendimento.",
       "idle"
     );
     return;
@@ -664,20 +664,20 @@ function updateScheduleAvailability(serviceValue) {
   if (serviceValue === "servico-outro") {
     setSelectOptions(
       scheduleDaySelect,
-      [{ value: "A confirmar com a clinica", label: "A confirmar com a clinica" }],
+      [{ value: "A confirmar com a clínica", label: "A confirmar com a clínica" }],
       "",
       false
     );
     setSelectOptions(
       scheduleTimeSelect,
-      [{ value: "A confirmar com a clinica", label: "A confirmar com a clinica" }],
+      [{ value: "A confirmar com a clínica", label: "A confirmar com a clínica" }],
       "",
       false
     );
-    scheduleDaySelect.value = "A confirmar com a clinica";
-    scheduleTimeSelect.value = "A confirmar com a clinica";
+    scheduleDaySelect.value = "A confirmar com a clínica";
+    scheduleTimeSelect.value = "A confirmar com a clínica";
     updateScheduleNote(
-      `${serviceLabel}: descreva abaixo o servico desejado e confirmaremos disponibilidade com a clinica.`,
+      `${serviceLabel}: descreva abaixo o serviço desejado e confirmaremos disponibilidade com a clínica.`,
       "fallback"
     );
     return;
@@ -688,20 +688,20 @@ function updateScheduleAvailability(serviceValue) {
   if (!availability.length) {
     setSelectOptions(
       scheduleDaySelect,
-      [{ value: "A confirmar com a clinica", label: "A confirmar com a clinica" }],
+      [{ value: "A confirmar com a clínica", label: "A confirmar com a clínica" }],
       "",
       false
     );
     setSelectOptions(
       scheduleTimeSelect,
-      [{ value: "A confirmar com a clinica", label: "A confirmar com a clinica" }],
+      [{ value: "A confirmar com a clínica", label: "A confirmar com a clínica" }],
       "",
       false
     );
-    scheduleDaySelect.value = "A confirmar com a clinica";
-    scheduleTimeSelect.value = "A confirmar com a clinica";
+    scheduleDaySelect.value = "A confirmar com a clínica";
+    scheduleTimeSelect.value = "A confirmar com a clínica";
     updateScheduleNote(
-      `${serviceLabel}: a disponibilidade sera confirmada pela clinica apos o envio da sua solicitacao.`,
+      `${serviceLabel}: a disponibilidade será confirmada pela clínica após o envio da sua solicitação.`,
       "fallback"
     );
     return;
@@ -716,7 +716,7 @@ function updateScheduleAvailability(serviceValue) {
   scheduleDaySelect.value = availability[0].day;
   updateScheduleTimeOptions();
   updateScheduleNote(
-    `${serviceLabel}: escolha o dia e depois confirme o horario desejado.`,
+    `${serviceLabel}: escolha o dia e depois confirme o horário desejado.`,
     "available"
   );
 }
@@ -813,13 +813,13 @@ function validateScheduleForm() {
   const whatsappDigits = scheduleWhatsappInput?.value.replace(/\D/g, "") || "";
 
   if (cpfDigits.length !== 11) {
-    scheduleCpfInput?.setCustomValidity("Digite um CPF com 11 digitos.");
+    scheduleCpfInput?.setCustomValidity("Digite um CPF com 11 dígitos.");
     scheduleCpfInput?.reportValidity();
     return false;
   }
 
   if (whatsappDigits.length < 10) {
-    scheduleWhatsappInput?.setCustomValidity("Digite um WhatsApp valido com DDD.");
+    scheduleWhatsappInput?.setCustomValidity("Digite um WhatsApp válido com DDD.");
     scheduleWhatsappInput?.reportValidity();
     return false;
   }
@@ -835,20 +835,20 @@ function submitScheduleForm() {
   const selectedServiceValue = scheduleServiceSelect?.value || "";
   const serviceLabel =
     selectedServiceValue === "servico-outro"
-      ? scheduleServiceCustomInput?.value.trim() || "Outro servico"
+      ? scheduleServiceCustomInput?.value.trim() || "Outro serviço"
       : getServiceLabelByValue(selectedServiceValue);
   const emailValue = scheduleEmailInput?.value.trim() || "";
   const messageLines = [
-    "Ola, quero solicitar um agendamento na UltraDerma.",
+    "Olá, quero solicitar um agendamento na UltraDerma.",
     "",
     `Nome completo: ${scheduleNameInput?.value.trim() || ""}`,
     `CPF: ${scheduleCpfInput?.value.trim() || ""}`,
-    emailValue ? `Email: ${emailValue}` : "",
+    emailValue ? `E-mail: ${emailValue}` : "",
     `Data de nascimento: ${formatBirthDate(scheduleBirthInput?.value || "")}`,
     `WhatsApp: ${scheduleWhatsappInput?.value.trim() || ""}`,
-    `Servico: ${serviceLabel}`,
+    `Serviço: ${serviceLabel}`,
     `Dia: ${scheduleDaySelect?.value || ""}`,
-    `Horario: ${scheduleTimeSelect?.value || ""}`
+    `Horário: ${scheduleTimeSelect?.value || ""}`
   ].filter(Boolean);
 
   const clinicPhoneNumber = "559889191424";
